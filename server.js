@@ -9,10 +9,11 @@ dotenv.config();
 /**
  * Routes
  */
+app.use("/contacts", require("./routes/contacts"));
+
 app.use("/", (req, res, next) =>{
     res.status(200).send("Welcome to Project 1 Contacts API - Heitor C. Cazado")
 });
-app.use("/contacts", require("./routes/contacts"));
 
 
 /**
