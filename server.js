@@ -3,19 +3,20 @@ const app = express();
 const {MongoClient} = require('mongodb');
 const mongodb = require("./db/connect");
 const dotenv = require("dotenv");
+const bodyParser = require("body-parser");
+const swaggerUi = require("swagger-ui-express");
+const swaggerDocument = require("./swagger-output.json");
+
 dotenv.config();
 
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
 /**
  * Routes
  */
-app.use("/contacts", require("./routes/contacts"));
-
-app.use("/", (req, res, next) =>{
-    res.status(200).send("Welcome to Project 1 Contacts API - Heitor C. Cazado")
-});
-
-
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument, {explorer: true}));
+app.use("/", require("./routes"));
 /**
  * Initializing Server
  */

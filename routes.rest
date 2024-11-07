@@ -1,0 +1,74 @@
+//LOCALHOST
+### Get all contacts
+GET http://localhost:8080/contacts
+
+### Get contact by ID
+GET http://localhost:8080/contacts/67265762075648f7a4f1adcb
+
+### Create new
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "John@mail.me",
+    "birthday": "06/28/1990",
+    "favoriteColor": "white"
+}
+
+### Update contact data
+PUT http://localhost:8080/contacts/672d17cde2995734e85ea5c2 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Doe",
+    "lastName": "John",
+    "email": "John@mail.me",
+    "birthday": "06/28/1990",
+    "favoriteColor": "black"
+}
+
+### Get contact by ID (testing put method)
+GET http://localhost:8080/contacts/672d17cde2995734e85ea5c2
+
+### Delete contact by ID
+DELETE http://localhost:8080/contacts/672d17cde2995734e85ea5c2
+
+
+//REMOTE (Render
+### Get all contacts
+GET https://cse341-6f28.onrender.com/contacts
+
+### Get contact by ID
+GET https://cse341-6f28.onrender.com/contacts/67265762075648f7a4f1adcb
+
+### Create new
+POST https://cse341-6f28.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "John@mail.me",
+    "birthday": "06/28/1990",
+    "favoriteColor": "white"
+}
+
+### Update contact data
+PUT https://cse341-6f28.onrender.com/contacts/:id HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Doe",
+    "lastName": "John",
+    "email": "John@mail.me",
+    "birthday": "06/28/1990",
+    "favoriteColor": "black"
+}
+
+### Get contact by ID (testing put method)
+GET https://cse341-6f28.onrender.com/contacts/:id
+
+### Delete contact by ID
+DELETE https://cse341-6f28.onrender.com/contacts/:id
