@@ -8,7 +8,7 @@ const doc = {
         author: "Heitor C. Cazado",
     },
     host: "https://cse341-6f28.onrender.com/",
-    schemes: ["https"]
+    schemes: ["http","https"]
 };
 
 const outputFile = "./swagger-output.json";
