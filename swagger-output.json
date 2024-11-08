@@ -6,7 +6,7 @@
     "author": "Heitor C. Cazado",
     "version": "1.0.0"
   },
-  "host": "https://cse341-6f28.onrender.com/",
+  "host": "cse341-6f28.onrender.com/",
   "basePath": "/",
   "schemes": [
     "https"

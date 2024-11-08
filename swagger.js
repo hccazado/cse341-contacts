@@ -7,7 +7,9 @@ const doc = {
         description: "An API to manage contacts. Project1 from BYU-I CSE341 class",
         author: "Heitor C. Cazado",
     },
-    host: "https://cse341-6f28.onrender.com/"
+    host: "cse341-6f28.onrender.com/",
+    basePath: "/",
+    schemes: ["https"]
 };
 
 const outputFile = "./swagger-output.json";
