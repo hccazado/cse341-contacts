@@ -72,7 +72,7 @@ const controller = {
 
             if(result.modifiedCount){
                 res.setHeader("Content-type", "application/json");
-                res.status(200).json({message: "Successfully updated!"});
+                res.status(204).json({message: "Successfully updated!"});
             }
             else{
                 res.setHeader("Content-type", "application/json");
@@ -91,7 +91,7 @@ const controller = {
             const result = await mongodb.getDb().db("project1").collection("contacts").deleteOne({_id: contactId});
             if(result.deletedCount){
                 res.setHeader("Content-type", "application/json");
-                res.status(200).json({message: "Successfully deleted!"})
+                res.status(204).json({message: "Successfully deleted!"})
             }
             else{
                 res.setHeader("Content-type", "application/json");
