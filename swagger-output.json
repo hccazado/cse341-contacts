@@ -9,7 +9,7 @@
   "host": "https://cse341-6f28.onrender.com/",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/contacts/": {
@@ -126,8 +126,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
           },
           "500": {
             "description": "Internal Server Error"
@@ -148,8 +148,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "No Content"
           },
           "500": {
             "description": "Internal Server Error"
