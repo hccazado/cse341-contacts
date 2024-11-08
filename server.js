@@ -12,6 +12,20 @@ dotenv.config();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
+
+/*
+* Setting res header CORS
+*/
+app.use((req, res, next) =>{
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader(
+        "Access-Control-Allow-Headers",
+        "Originn, X-Requested-With, Content-Type, Accept, Z-Key"
+    );
+    res.setHeader("Access-Conntrol-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+    next();
+});
+
 /**
  * Routes
  */
